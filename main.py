@@ -25,7 +25,7 @@ def mangaUpdatesFromMangaReader():
 				if(len(text)>0):
 					bolum = int(text.get("href").split('/')[2])
 			#print(manga_ismi,link,bolum)
-			mangaReaderUpdates.append(manga_ismi,link,bolum)
+			mangaReaderUpdates.append([manga_ismi,link,bolum])
 	return mangaReaderUpdates
 
 """
