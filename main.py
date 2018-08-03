@@ -28,15 +28,6 @@ def mangaUpdatesFromMangaReader():
 			mangaReaderUpdates.append([manga_ismi,link,bolum])
 	return mangaReaderUpdates
 
-"""
-def mangaVadisiUpdates:
-	#class = media-heading
-	BASE_URL = "http://manga-v2.mangavadisi.org"
-	manga_list = ["/manga-list?page=1","/manga-list?page=2"]
-
-
-"""
-
 def mangaWTUpdates():
 	mangaWTUpdates = []
 	#class = chart-title
@@ -106,6 +97,7 @@ def mangaUpdatesFromEpikManga():
 			bolum = linkler.text[1:].split(" ")[0]
 			epikManga.append([manga_ismi,link,bolum])
 	return epikManga
+
 def mangaUpdatesFromMangaKakalot():
 	mangaKakalot = []
 	BASE_URL = "http://mangakakalot.com"
