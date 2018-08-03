@@ -106,5 +106,22 @@ def mangaUpdatesFromEpikManga():
 			bolum = linkler.text[1:].split(" ")[0]
 			epikManga.append([manga_ismi,link,bolum])
 	return epikManga
-
+def mangaUpdatesFromMangaKakalot():
+	mangaKakalot = []
+	BASE_URL = "http://mangakakalot.com"
+	manga_list = "/manga_list?type=topview&category=all&state=all&page=" #max = 862
+	for page_nums in tqdm(range(1)):
+		link = BASE_URL + manga_list + str(page_nums)
+		req = requests.get(link).text
+		soup = bs(req,'html.parser')
+		linkler = soup.find_all('div',{'class':'list-truyen-item-wrap'})
+		for link in linkler:
+			if(len(link)>1):
+				manga_ismi = link.find('a').get('title')
+				link = link.find('a').get('href')
+				req = requests.get(link).text
+				soup = bs(req,'html.parser')
+				bolum = soup.find('div',{'class':'chapter-list'}).find('a').get('href').split('_')[-1]
+				mangaKakalot.append([manga_ismi,link,bolum])
+	return mangaKakalot
 
