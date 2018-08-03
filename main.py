@@ -63,4 +63,29 @@ def mangaWTUpdates():
 				mangaWTUpdates.append([manga_ismi,link,bolum])
 		return mangaWTUpdates
 
-print(mangaWTUpdates())
+def mangaUpdatesfromPuzzmos():
+	puzzMos = []
+	# Aslında ana sayfada da yazıyor son bölüm ben bununla niye uğraştım ki -.-"
+	BASE_URL = "https://puzzmos.com"
+	manga_list = "/directory?Sayfa="
+	# Maksimum sayfa numarasını çekmek için mantıklı bir çözüm düşüneceğim.
+	for page_num in tqdm(range(1,65)):
+		link = BASE_URL + manga_list + str(page_num)
+		req = requests.get(link).text
+		soup = bs(req,'html.parser')
+		manga_linkleri = soup.find_all('h4',{"class":"media-heading"})
+		for links in manga_linkleri:
+			link = links.find('a').get('href')
+			manga_ismi = links.find('a').text
+			req = requests.get(link).text
+			soup = bs(req,'html.parser')
+			linkler = soup.find_all('table',{'class':'table table-hover'})
+			for link in linkler:
+				if(link.find('a') != None):
+					link = link.find('a').get('href')
+					episode = link.split('/')[-1]
+					puzzMos.append([manga_ismi,link,episode])
+	return puzzMos
+
+
+print(mangaUpdatesfromPuzzmos())
