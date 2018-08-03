@@ -2,19 +2,11 @@
 
 | Status | Websites | Language | 
 | -------- | -------- | -------- |
-| <li>- [x] </li> | https://puzzmos.com/ | Turkish | 
-| <li>- [x] </li> | http://mangawt.com   | Turkish |
-| -	[ ]	   | https://www.epikmanga.com | Turkish |
-| -	[ ]	   | https://mangacim.com/ | Turkish |
-| <li>- [x] </li> | http://mangareader.net | English |
-| -	[ ]	   | http://mangakakalot.com/ | English |
-| -	[ ]	   | https://mangarock.com/ | English |
-| - [ ]	   | https://mangasim.com/ | English |
-| -	[x]	   | https://puzzmos.com/ | Turkish | 
-| -	[x]	   | http://mangawt.com   | Turkish |
-| -	[ ]	   | https://www.epikmanga.com | Turkish |
-| -	[ ]	   | https://mangacim.com/ | Turkish |
-| -	[x]	   | http://mangareader.net | English |
-| -	[ ]	   | http://mangakakalot.com/ | English |
-| -	[ ]	   | https://mangarock.com/ | English |
-| -	[ ]	   | https://mangasim.com/ | English |
+| <ul><li>- [x] Works</li></ul>  | https://puzzmos.com/ | Turkish | 
+| <ul><li>- [x] Works</li></ul>  | http://mangawt.com   | Turkish |
+| <ul><li>- [ ] Works</li></ul>   | https://www.epikmanga.com | Turkish |
+| <ul><li>- [ ] Works</li></ul>  | https://mangacim.com/ | Turkish |
+| <ul><li>- [x] Works</li></ul> | http://mangareader.net | English |
+| <ul><li>- [ ] Works</li></ul>  | http://mangakakalot.com/ | English |
+| <ul><li>- [ ] Works</li></ul>  | https://mangarock.com/ | English |
+| <ul><li>- [ ] Works</li></ul>  | https://mangasim.com/ | English |
