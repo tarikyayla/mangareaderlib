@@ -1,3 +1,4 @@
+
 # Site List
 
 | Status | Websites | Language | 
@@ -10,3 +11,5 @@
 | <ul><li>- [x] Works</li></ul> | http://mangakakalot.com/ | English |
 | <ul><li>- [ ] Works</li></ul> | https://mangarock.com/ | English |
 | <ul><li>- [ ] Works</li></ul> | https://mangasim.com/ | English |
+
+Currently working on it. Not finished yet.
