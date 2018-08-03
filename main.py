@@ -87,5 +87,24 @@ def mangaUpdatesfromPuzzmos():
 					puzzMos.append([manga_ismi,link,episode])
 	return puzzMos
 
+def mangaUpdatesFromEpikManga():
+	epikManga = []
+	BASE_URL = "https://www.epikmanga.com"
+	manga_list = "/seri-listesi"
+	link = BASE_URL+manga_list
+	req = requests.get(link).text
+	soup = bs(req,'html.parser')
+	linkler = soup.find_all('h3',{'class':'media-heading'})
+	for c,link in enumerate(tqdm(linkler)):
+		manga_ismi = link.text
+		link = link.find('a').get('href')
+		req = requests.get(link).text
+		soup = bs(req,'html.parser')
+		linkler = soup.find('table',{'class':'table table-bordered'}).find('a')
+		if(linkler != None):
+			link = linkler.get('href')
+			bolum = linkler.text[1:].split(" ")[0]
+			epikManga.append([manga_ismi,link,bolum])
+	return epikManga
 
-print(mangaUpdatesfromPuzzmos())
+
