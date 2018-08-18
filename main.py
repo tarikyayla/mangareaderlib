@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs
 import requests
 from tqdm import tqdm
-
+import mangareader
 # Mangareader: 
 
 def mangaUpdatesFromMangaReader():
@@ -72,7 +72,7 @@ def mangaUpdatesfromPuzzmos():
 			soup = bs(req,'html.parser')
 			linkler = soup.find_all('table',{'class':'table table-hover'})
 			for link in linkler:
-				if(link.find('a') != None):
+				if(link.find('a') != None): 
 					link = link.find('a').get('href')
 					episode = link.split('/')[-1]
 					puzzMos.append([manga_ismi,link,episode])
@@ -86,7 +86,7 @@ def mangaUpdatesFromEpikManga():
 	req = requests.get(link).text
 	soup = bs(req,'html.parser')
 	linkler = soup.find_all('h3',{'class':'media-heading'})
-	for c,link in enumerate(tqdm(linkler)):
+	for c,link in enumerate(tqdm(linkler[:15])):
 		manga_ismi = link.text
 		link = link.find('a').get('href')
 		req = requests.get(link).text
@@ -95,7 +95,10 @@ def mangaUpdatesFromEpikManga():
 		if(linkler != None):
 			link = linkler.get('href')
 			bolum = linkler.text[1:].split(" ")[0]
-			epikManga.append([manga_ismi,link,bolum])
+			str(manga_ismi).replace(":","")
+			mangaObject = mangareader.Manga(manga_ismi,link,bolum)
+			#epikManga.append([manga_ismi,link,bolum])
+			epikManga.append(mangaObject)
 	return epikManga
 
 def mangaUpdatesFromMangaKakalot():
