@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
 from tqdm import tqdm
-import mangareader
 # Mangareader: 
 
 def mangaUpdatesFromMangaReader():
