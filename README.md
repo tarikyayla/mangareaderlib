@@ -32,5 +32,3 @@ mr.exportAsJSON(mr.epikmanga(),'epikmanga')
 | <ul><li>- [x] Works</li></ul> | http://mangareader.net | English |
 | <ul><li>- [x] Works</li></ul> | http://mangakakalot.com/ | English |
 | <ul><li>- [ ] Works</li></ul> | https://mangarock.com/ | English |
-
-Currently working on it. Not finished yet.
