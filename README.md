@@ -18,7 +18,11 @@ python setup.py install
 import mangareaderlib as mr 
 # mr.exportAsJSON(mangaArray,Outpufile)
 mr.exportAsJSON(mr.epikmanga(),'epikmanga')
-# check dir(mr) for all function list.
+mr.exportAsJSON(mr.mangareader(),'mangareader')
+mr.exportAsJSON(mr.mangakakalot(),'mangakakalot')
+mr.exportAsJSON(mr.puzzmos(),'puzzmos')
+mr.exportAsJSON(mr.mangawt(),'mangawt')
+# if you want to edit script just type print(mr.__file__) and open with editor.
 ```
 
 # Site List
