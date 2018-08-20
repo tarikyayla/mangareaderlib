@@ -1,3 +1,19 @@
+# Installation
+    pip install git+https://github.com/tarikyayla/mangareaderlib
+**or**
+```shell
+git clone https://github.com/tarikyayla/mangareaderlib
+cd mangareaderlib
+python setup.py install
+```
+# Usage
+
+```python
+import mangareaderlib as mr 
+# mr.exportAsJSON(mangaArray,Outpufile)
+mr.exportAsJSON(mr.epikmanga(),'epikmanga')
+# check dir(mr) for all function list.
+```
 
 # Site List
 
