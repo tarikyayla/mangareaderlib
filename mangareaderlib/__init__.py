@@ -36,9 +36,13 @@ def mangareader():
 			manga_img = soup.find("div",{"id":"mangaimg"}).find("img").get("src")
 			manga_desc = soup.select("div#readmangasum p")[0].text
 			for element in linkler:
-				text= element.find("li").find("a")
-				if(len(text)>0):
-					bolum = int(text.get("href").split('/')[2])
+				print(element)
+				try:
+					text= element.find("li").find("a")
+					if(len(text)>0):
+						bolum = int(text.get("href").split('/')[2])
+				except Exception as e:
+					pass				
 			mangaReaderUpdates.append(Manga(manga_ismi,link,bolum,manga_img,manga_desc,"eng","mangareader"))
 	return mangaReaderUpdates
 
@@ -121,7 +125,7 @@ def mangakakalot():
 	mangaKakalot = []
 	BASE_URL = "http://mangakakalot.com"
 	manga_list = "/manga_list?type=topview&category=all&state=all&page=" #max = 862
-	for page_nums in tqdm(range(1)):
+	for page_nums in tqdm(range(862)):
 		link = BASE_URL + manga_list + str(page_nums)
 		req = requests.get(link).text
 		soup = bs(req,'html.parser')
