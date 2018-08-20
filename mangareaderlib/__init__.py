@@ -36,7 +36,6 @@ def mangareader():
 			manga_img = soup.find("div",{"id":"mangaimg"}).find("img").get("src")
 			manga_desc = soup.select("div#readmangasum p")[0].text
 			for element in linkler:
-				print(element)
 				try:
 					text= element.find("li").find("a")
 					if(len(text)>0):
