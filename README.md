@@ -1,3 +1,9 @@
+# Description
+
+With this python module you can scrap manga sites and export as json. You can check all updated json files in json folder.
+
+###### ***Working With Python3+***
+
 # Installation
     pip install git+https://github.com/tarikyayla/mangareaderlib
 **or**
