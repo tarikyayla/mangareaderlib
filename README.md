@@ -1,6 +1,6 @@
 # mangareaderlib
 
-With this python sciprt you can scrap manga sites and export as json. You can check all updated json files in json folder.
+With this python script you can scrap manga sites and export as json. You can check all updated json files in json folder.
 
 ###### ***Currently supporting python 3.5+***
 
